@@ -1,0 +1,42 @@
+.dob-datepicker__day {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &:focus {
+        outline: none;
+    }
+
+    &__button {
+        position: relative;
+        width: 20%;
+        height: 100%;
+        border: none;
+        padding: none;
+        padding: 0.8rem 0;
+        background-color: $select-month__button__background-color;
+        z-index: 0;
+        -webkit-text-stroke: 0px; //font look ugly on chrome, so I use this
+        font-family: $datepicker__font-family;
+
+        &:not(:nth-child(31)) {
+            border-bottom: 1px solid $select-month__button__divider-background-color;
+        }
+
+        &:not(:nth-child(5n)) {
+            border-right: 1px solid $select-month__button__divider-background-color;
+        }
+
+        @include hover_and_focus_state;
+
+    }
+
+    &__ordinal-number {
+        line-height: 0;
+        display: inline;
+        font-size: 75%;
+        vertical-align: super;
+        margin: 0;
+        padding: 0;
+    }
+}

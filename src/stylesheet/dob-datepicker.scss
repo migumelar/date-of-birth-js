@@ -1,0 +1,94 @@
+.dob-datepicker {
+    position: absolute;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: $datepicker__background-color;
+    padding: 10px;
+    border-radius: 0.5rem;
+    border: 1px solid $datepicker__border-color;
+    font-family: $datepicker__font-family;
+    color: $datepicker__font-color;
+
+    @media only screen and (max-width: 768px) {
+        & {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate((-50%, -50%));
+        }
+    }
+
+    &--popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate((-50%, -50%));
+    }
+
+    &__wrapper {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+
+        &--hide {
+            display: none;
+        }
+    }
+
+    &__background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+
+        @media only screen and (max-width: 768px) {
+            & {
+                opacity: $popup-background__opacity;
+                background-color: $popup-background__background-color;
+            }
+        }
+
+        &--popup {
+            opacity: $popup-background__opacity;
+            background-color: $popup-background__background-color;
+        }
+    }
+
+    &__alert {
+        color: $alert__font-color;
+        font-weight: 600;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    &__header {
+        font-weight: 600;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    &__selection-header {
+        text-align: center;
+    }
+
+    &__options {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    &__reset {
+        align-self: flex-start;
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: $datepicker__background-color;
+        border: none;
+        font-family: $datepicker__font-family;
+
+        @include hover_and_focus_state;
+
+    }
+}

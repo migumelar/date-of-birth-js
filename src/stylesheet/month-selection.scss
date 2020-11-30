@@ -1,0 +1,34 @@
+// styling for month selection section (january - february buttons)
+.dob-datepicker__month {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &:focus{
+        outline: none;
+    }
+
+    &__button {
+        position: relative;
+        width: 33.33%;
+        border: none;
+        padding: none;
+        padding: 0.8rem 0;
+        background-color: $select-month__button__background-color;
+        z-index: 0;
+        -webkit-text-stroke: 0px; //font look ugly on chrome, so I use this
+        font-family: $datepicker__font-family;
+
+
+        &:not(:nth-child(1n+10)) {
+            border-bottom: 1px solid $select-month__button__divider-background-color;
+        }
+
+        &:not(:nth-child(3n)) {
+            border-right: 1px solid $select-month__button__divider-background-color;
+        }
+
+        @include hover_and_focus_state;
+
+    }
+}

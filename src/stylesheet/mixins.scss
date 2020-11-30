@@ -1,0 +1,19 @@
+@mixin hover_and_focus_state {
+    &:hover,
+    &:focus {
+        outline: none;
+        position: relative;
+        z-index: 10;
+        box-shadow: $datepicker__default-ring;
+        font-weight: 600;
+        text-decoration: underline;
+        border-radius: 5px;
+        cursor: pointer;
+
+        /* Visible in Windows high-contrast themes */
+        // source: https://stackoverflow.com/questions/52589391/css-box-shadow-vs-outline
+        outline-color: transparent;
+        outline-width: 2px;
+        outline-style: dotted;
+    }
+}

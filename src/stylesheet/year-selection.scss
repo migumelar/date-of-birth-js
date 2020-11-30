@@ -1,0 +1,85 @@
+.dob-datepicker__year {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    overflow-y: scroll;
+    width: 100%;
+
+    &:focus {
+        outline: none;
+    }
+
+    &--snap-active {
+        scroll-snap-type: y mandatory;
+    }
+
+    &__year-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+
+        &--snap-active {
+            scroll-snap-align: start;
+        }
+    }
+
+    &__year-section-header {
+        font-size: 0.8rem;
+        font-weight: 600;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__year-section-next {
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        line-height: 0;
+        font-size: 2rem;
+        font-weight: 600;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    &__button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        width: 25%;
+        border: none;
+        padding: none;
+        padding: 0.8rem 0;
+        background-color: $select-month__button__background-color;
+        z-index: 0;
+        border-bottom: 1px solid $select-month__button__divider-background-color;
+        -webkit-text-stroke: 0px; //font look ugly on chrome, so I use this
+        font-family: $datepicker__font-family;
+
+        &:not(:nth-child(4n)) {
+            border-right: 1px solid $select-month__button__divider-background-color;
+        }
+
+        @include hover_and_focus_state;
+
+        &__first {
+            font-weight: 300;
+        }
+
+        &__last {
+            font-weight: 600;
+        }
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./dist/css/main.css">
+</head>
+
+<style>
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-point {
+        height: 250px;
+        border: 1px solid red;
+    }
+
+    input {
+        margin-top: 4rem;
+    }
+
+    .input-point {
+        margin-top: 20rem;
+        margin-left: 10rem;
+    }
+</style>
+
+<body>
+
+    <div class="wrapper">
+
+
+        <div class="input-point">
+            <label for="">date of birth one:</label>
+            <input id="dob" type="text">
+        </div>
+        <input type="text">
+        <div class="input-point">
+            <label for="">date of birth two:</label>
+            <input id="dob2" type="text">
+        </div>
+        
+    </div>
+
+    <script src="/dist/js/index.js"></script>
+
+
+
+</body>
+
+<script>
+
+    console.log(dobDatepicker)
+    const one = window.dobDatepicker()
+    const two = window.dobDatepicker()
+    // const three = new window.DobDatepicker()
+
+    one.init('#dob2', {
+        display_mode: 'inline'
+    })
+
+    // three.init('#dob3', {
+    //     display_mode: 'inline'
+    // })
+
+    two.init('#dob', {
+        display_mode: 'popup',
+        year_range: 5,
+        dateFormat: function (date) {
+            return new Date(date).toString()
+        },
+        show_long_month: false,
+        labels: {
+            header_label: 'AWhen is your birthday?',
+            select_day_label: 'BSelect day',
+            select_month_label: 'CSelect month',
+            select_year_label: 'DSelect year',
+            reset_button_label: 'EReset and try again',
+            date_range_label: 'FYear ' //label for year section -> "Year 2000 - 2020"
+        },
+        alerts: {
+            invalid_date_alert: 'wrrroooooonnngg'
+        }
+    })
+</script>
+
+</html>
