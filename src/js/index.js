@@ -34,7 +34,7 @@ const DEFAULT_OPTIONS = {
 }
 
 // function factory of datepicker
-function dobDatepicker() {
+function dobDatepicker(selector, options) {
 
     const datepickerPrototype = Object.create(datepickerMethods)
 
@@ -61,7 +61,10 @@ function dobDatepicker() {
     }
 
 
-    return Object.assign(datepickerPrototype, datepickerData)
+    const datepickerInstance =  Object.assign(datepickerPrototype, datepickerData)
+    datepickerInstance.init(selector, options)
+
+    return datepickerInstance
 }
 
 

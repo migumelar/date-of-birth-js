@@ -55,32 +55,32 @@
 <script>
 
     // console.log(dobDatepicker)
-    const one = dobDatepicker()
+    // const one = dobDatepicker()
     // const two = window.dobDatepicker()
 
     dob = document.getElementById('dob')
-    one.init(dob, {
-        display_mode: 'inline'
+    const one = dobDatepicker(dob, {
+        display_mode: 'popup'
     })
 
-    // two.init(dob, {
-    //     year_range: 5,
-    //     dateFormat: function (date) {
-    //         return new Date(date).toString()
-    //     },
-    //     show_long_month: false,
-    //     labels: {
-    //         header_label: 'AWhen is your birthday?',
-    //         select_day_label: 'BSelect day',
-    //         select_month_label: 'CSelect month',
-    //         select_year_label: 'DSelect year',
-    //         reset_button_label: 'EReset and try again',
-    //         date_range_label: 'FYear ' //label for year section -> "Year 2000 - 2020"
-    //     },
-    //     alerts: {
-    //         invalid_date_alert: 'wrrroooooonnngg'
-    //     }
-    // })
+    const two = dobDatepicker('#dob2', {
+        year_range: 5,
+        dateFormat: function (date) {
+            return new Date(date).toString()
+        },
+        show_long_month: false,
+        labels: {
+            header_label: 'AWhen is your birthday?',
+            select_day_label: 'BSelect day',
+            select_month_label: 'CSelect month',
+            select_year_label: 'DSelect year',
+            reset_button_label: 'EReset and try again',
+            date_range_label: 'FYear ' //label for year section -> "Year 2000 - 2020"
+        },
+        alerts: {
+            invalid_date_alert: 'wrrroooooonnngg'
+        }
+    })
 </script>
 
 </html>
