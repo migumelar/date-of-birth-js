@@ -36,7 +36,7 @@ function datepickerUI(app) {
 
 function topArrow(app) {
     return h('div', {
-        "class": `top-arrow ${app.options.display_mode === 'popup' ? 'top-arrow--popup' : '' }`
+        "class": `top-arrow ${app.options.display_mode === 'popup' ? 'top-arrow--popup' : ''}`
     })
 }
 
@@ -108,8 +108,8 @@ function monthSelection(app) {
                 "key": index + 1,
                 "value": index + 1,
                 "class": "dob-datepicker__month__button",
-                onclick: function (e) {
-                    storeValue('month', parseInt(e.target.value), app)
+                onclick: function () {
+                    storeValue('month', index + 1, app)
                     app.renderDatepicker()
                 }
             },
@@ -129,8 +129,8 @@ function daySelection(app) {
                 "key": index,
                 "value": index,
                 "class": "dob-datepicker__day__button",
-                "onclick": (e) => {
-                    storeValue('day', parseInt(e.target.value), app)
+                "onclick": () => {
+                    storeValue('day', index, app)
                     app.renderDatepicker()
                 }
             }, [
@@ -216,7 +216,7 @@ function generateYear(app) {
                     h('span', { "class": "dob-datepicker__year__button__last" }, text(i.toString().substring(2)))
                 ])
             )
-            
+
             // if the year section is full (20 years), then wrap the BUTTONS with year section element (year 2020 - 2001, down arrow and averyhting else )
             if (year_section.length === 20) {
 

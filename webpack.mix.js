@@ -1,17 +1,29 @@
 let mix = require('laravel-mix');
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for your application, as well as bundling up your JS files.
- |
- */
+// UMD doesnt work if combined with sass file, so I manually build it twice by uncomentted the will be used code
+// If you understand webpack I would be grateful if you can fix this
+mix
+    .webpackConfig({
+        output: {
+            library: 'dobDatepicker',
+            libraryExport: 'default',
+            umdNamedDefine: true,
+            libraryTarget: 'umd',
+        }
+    })
+    .js('src/js/index.js', 'dist/js/index.concat.js')
+    .babel('dist/js/index.concat.js', 'dist/js/index.js');
 
-mix.js('src/js/index.js', 'dist/js/index.concat.js').babel('dist/js/index.concat.js', 'dist/js/index.js').sass('src/stylesheet/main.scss', 'dist/css')
+// build sass files 
+// mix.sass('src/stylesheet/main.scss', 'dist/css');
+
+
+// development configuration
+// mix
+//     .js('src/js/index.js', 'dist/js/index.concat.js')
+//     .babel('dist/js/index.concat.js', 'dist/js/index.js')
+//     .sass('src/stylesheet/main.scss', 'dist/css');
+
 
 // Full API
 // mix.js(src, output);
@@ -23,7 +35,6 @@ mix.js('src/js/index.js', 'dist/js/index.concat.js').babel('dist/js/index.concat
 // mix.sass(src, output);
 // mix.less(src, output);
 // mix.stylus(src, output);
-// mix.postCss(src, output, [require('postcss-some-plugin')()]);
 // mix.browserSync('my-site.test');
 // mix.combine(files, destination);
 // mix.babel(files, destination); <-- Identical to mix.combine(), but also includes Babel compilation.

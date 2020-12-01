@@ -1,8 +1,8 @@
 {
   "name": "date-of-birth-js",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "A datepicker specific for date of birth",
-  "main": "index.js",
+  "main": "dist/js/index.js",
   "dependencies": {
     "focus-trap": "^6.2.1",
     "superfine": "^8.0.10",
@@ -16,6 +16,10 @@
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.12"
   },
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",

@@ -68,28 +68,28 @@ function dobDatepicker() {
 // datepicker methods prototype
 const datepickerMethods = {
     getDatepickerWidgetNode: function () {
-
+        
         return this.datepickerWidgetNode ? this.datepickerWidgetNode : this.setDatepickerWidgetNode()
     },
     setDatepickerWidgetNode: function () {
-
+        
         return this.datepickerWidgetNode = document.getElementById(`datepicker-widget__${this.instance_id}`);
     },
     getDatepickerTargetNode: function () {
-
+        
         return this.datepickerTargetNode ? this.datepickerTargetNode : this.setDatepickerTargetNode()
     },
     setDatepickerTargetNode: function () {
-
+        
         return this.datepickerTargetNode = (this.selector instanceof Element) ? this.selector : document.querySelector(this.getSelector())
     },
     getDatepickerTargetParentNode: function () {
-
+        
         return this.datepickerTargetParentNode ? this.datepickerTargetParentNode : this.setDatepickerTargetParentNode()
     },
     setDatepickerTargetParentNode: function () {
 
-        return this.datepickerTargetParentNode = document.querySelector(this.getSelector()).parentElement;
+        return this.datepickerTargetParentNode = (this.selector instanceof Element) ? this.selector.parentElement : document.querySelector(this.getSelector()).parentElement;
     },
     getdatepickerContainerNode: function () {
 
@@ -153,7 +153,7 @@ const datepickerMethods = {
         return this
     },
     attachListenerToTargetNode: function () {
-
+        
         // when cursor focus on datepicker then show the datepicker
         this.getDatepickerTargetNode().addEventListener("focus", () => {
             this.showDatepicker()
@@ -227,9 +227,10 @@ const datepickerMethods = {
 }
 
 
-// expose funtion to global variable so the method is usable directly from browser
-if(typeof window !== 'undefined'){
-    window.dobDatepicker = dobDatepicker
-}
+// expose funtion to global variable so the method is usable directly from browser, 
+// this commented code is here for the convinience for development adn debugging
+// if(typeof window !== 'undefined'){
+//     window.dobDatepicker = dobDatepicker
+// }
 
 export default dobDatepicker
