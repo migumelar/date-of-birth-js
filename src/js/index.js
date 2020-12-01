@@ -228,6 +228,8 @@ const datepickerMethods = {
 
 
 // expose funtion to global variable so the method is usable directly from browser
-window.dobDatepicker = dobDatepicker
+if(typeof window !== 'undefined'){
+    window.dobDatepicker = dobDatepicker
+}
 
 export default dobDatepicker
