@@ -70,17 +70,23 @@
         font-weight: 600;
         text-align: center;
         margin: 1rem 0;
+        color: $datepicker__font-color;
+
     }
 
     &__selection-header {
         font-size: 16px;
         text-align: center;
+        color: $datepicker__font-color;
+
     }
 
     &__options {
         font-size: 13px;
         width: 100%;
         padding: 1rem 0;
+        color: $datepicker__font-color;
+
     }
 
     &__reset {
@@ -92,6 +98,8 @@
         background-color: $datepicker__background-color;
         border: none;
         font-family: $datepicker__font-family;
+        color: $datepicker__font-color;
+
 
         @include hover_and_focus_state;
 

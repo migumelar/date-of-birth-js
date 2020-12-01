@@ -4,6 +4,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     font-size: inherit;
+    color: $datepicker__font-color;
 
     &:focus{
         outline: none;
@@ -19,6 +20,7 @@
         z-index: 0;
         -webkit-text-stroke: 0px; //font look ugly on chrome, so I use this
         font-family: $datepicker__font-family;
+        color: $datepicker__font-color;
 
 
         &:not(:nth-child(1n+10)) {

@@ -5,6 +5,7 @@
     overflow-y: scroll;
     width: 100%;
     font-size: inherit;
+    color: $datepicker__font-color;
 
     &:focus {
         outline: none;
@@ -68,6 +69,7 @@
         border-bottom: 1px solid $select-month__button__divider-background-color;
         -webkit-text-stroke: 0px; //font look ugly on chrome, so I use this
         font-family: $datepicker__font-family;
+        color: $datepicker__font-color;
 
         &:not(:nth-child(4n)) {
             border-right: 1px solid $select-month__button__divider-background-color;

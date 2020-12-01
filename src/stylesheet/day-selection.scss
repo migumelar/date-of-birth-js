@@ -3,7 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     font-size: inherit;
-    
+
     &:focus {
         outline: none;
     }
@@ -19,6 +19,7 @@
         z-index: 0;
         -webkit-text-stroke: 0px; //font look ugly on chrome, so I use this
         font-family: $datepicker__font-family;
+        color: $datepicker__font-color;
 
         &:not(:nth-child(31)) {
             border-bottom: 1px solid $select-month__button__divider-background-color;
