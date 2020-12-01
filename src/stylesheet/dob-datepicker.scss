@@ -1,6 +1,7 @@
 .dob-datepicker {
+    box-sizing: border-box;
     position: absolute;
-    width: 300px;
+    width: 322px;
     display: flex;
     flex-direction: column;
     background-color: $datepicker__background-color;
@@ -65,21 +66,25 @@
     }
 
     &__header {
+        font-size: 16px;
         font-weight: 600;
         text-align: center;
         margin: 1rem 0;
     }
 
     &__selection-header {
+        font-size: 16px;
         text-align: center;
     }
 
     &__options {
+        font-size: 13px;
         width: 100%;
         padding: 1rem 0;
     }
 
     &__reset {
+        font-size: 13px;
         align-self: flex-start;
         display: inline-flex;
         flex-direction: row;

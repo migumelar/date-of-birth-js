@@ -4,6 +4,7 @@
     height: 300px;
     overflow-y: scroll;
     width: 100%;
+    font-size: inherit;
 
     &:focus {
         outline: none;
