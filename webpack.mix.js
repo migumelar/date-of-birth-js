@@ -2,20 +2,20 @@ let mix = require('laravel-mix');
 
 // UMD doesnt work if combined with sass file, so I manually build it twice by uncomentted the will be used code
 // If you understand webpack I would be grateful if you can fix this
-// mix
-//     .webpackConfig({
-//         output: {
-//             library: 'dobDatepicker',
-//             libraryExport: 'default',
-//             umdNamedDefine: true,
-//             libraryTarget: 'umd',
-//         }
-//     })
-//     .js('src/js/index.js', 'dist/js/index.concat.js')
-//     .babel('dist/js/index.concat.js', 'dist/js/index.js');
+mix
+    .webpackConfig({
+        output: {
+            library: 'dobDatepicker',
+            libraryExport: 'default',
+            umdNamedDefine: true,
+            libraryTarget: 'umd',
+        }
+    })
+    .js('src/js/index.js', 'dist/js/index.concat.js')
+    .babel('dist/js/index.concat.js', 'dist/js/date-of-birth-js.min.js');
 
 // build sass files 
-mix.sass('src/stylesheet/main.scss', 'dist/css');
+// mix.sass('src/stylesheet/main.scss', 'dist/css/date-of-birth-js.min.css');
 
 
 // development configuration

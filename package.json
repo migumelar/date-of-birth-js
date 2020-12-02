@@ -1,6 +1,6 @@
 {
   "name": "date-of-birth-js",
-  "version": "2.0.2",
+  "version": "2.0.4",
   "description": "A datepicker specific for date of birth",
   "main": "dist/js/index.js",
   "dependencies": {
@@ -16,6 +16,7 @@
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.12"
   },
+  "homepage": "https://github.com/migumelar/date-of-birth-js#date-of-birth-js",
   "files": [
     "dist",
     "src"
@@ -29,6 +30,18 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Irfan Gumelar <irfangumelar@gmail.com>",
-  "license": "MIT"
+  "author": "Irfan Gumelar",
+  "email": "irfangumelar@gmail.com",
+  "license": "MIT",
+  "keywords": [
+    "datepicker",
+    "date of birth",
+    "dob",
+    "calendar",
+    "picker"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/migumelar/date-of-birth-js.git"
+  }
 }
