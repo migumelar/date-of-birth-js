@@ -24,24 +24,24 @@ npm i date-of-birth-js
 ```
 #### Import JS library to your project
 ES6 module:
-```
+```js
 import dobDatepicker from 'date-of-birth-js'
 ```
 Or, Common JS:
-```
+```js
 const dobDatepicker = require('date-of-birth-js')
 ```
 #### Import stylesheets to your project
 Import SCSS to your projects
-```
+```scss
 @import '~js-date-of-birth/src/js/main'
 ```
 Import CSS file to your projects
-```
+```scss
 @import '~js-date-of-birth/dist/css/main.css'
 ```
 ## How to use it in your code
-```
+```js
 const dob = datepicker(selector, options)
 ```
 So what are `selector` and `options` arguments?
@@ -57,7 +57,7 @@ _NOTE: Datepicker will not change the value of input fields with a type of_ `dat
 
 ## `Options` argument
 `Options` arguments contains datepicker's configuration, if you do not supply any `options`here is the default values:
-```
+```js
 {
 	display_mode:  'inline',
 	year_range:  120,
@@ -93,7 +93,7 @@ Possible value: 'inline' or 'popup'
 Description: Display the datepicker whether inline (right in the bottom of the selected element) or in popup. 
 
 example:
-```
+```js
 // display datepicker in popup mode
 const dob = dobDatepicker('#dob-input', {display_mode: 'popup'})
 ```
@@ -106,11 +106,10 @@ Possible value: Any
 Description: By default the datepicker will show the last 120 years in select year page, you can the number using this property
 
 example:
-```
+```js
 // this will show all last 140 years in select year page
 const dob = dobDatepicker('#dob-input', {year_range: 140})
 ```
-
 
 ### `enable_built_in_validation` - should the datepicker apply basic validation or not
 Type: Boolean
@@ -124,7 +123,7 @@ If the selected date do not pass the validation, the datepicker will return to t
 If you want to disable the basic validation, supply `false`to this `enable-built_in_validation`property.
 
 example:
-```
+```js
 // disable built it validation
 const dob = dobDatepicker('#dob-input', {enable_built_in_validation: false})
 ```
@@ -135,7 +134,7 @@ Possible value: Any
 Description: As you can read in `enable_built_in_validation`section, upon failed validation the datepicker will show an alert message, the default message is `Date is invalid`. You can the message in this property.
 
 example:
-```
+```js
 // custom alert message
 const dob = dobDatepicker('#dob-input', {
 	alerts: {
@@ -149,7 +148,7 @@ Possible Value: Array with 12 elements with String type
 Description: Change name of the months to another language. The default value is in English such as ['January', 'February', 'March', etc...]
 
 example:
-```
+```js
 // change name of the months to another language
 const dob = dobDatepicker('#dob-input', {
 	long_month: ['Januari', 'Februari','Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
@@ -161,7 +160,7 @@ Possible Value: Array with 12 elements with String type
 Description: Change abbreviation for months to other language.
 
 example:
-```
+```js
 // change name of the months to another language
 const dob = dobDatepicker('#dob-input', {
 	short_month: ['Jen', 'Feb','Mor', 'Apr', etc ...]
@@ -173,7 +172,7 @@ Possible Value: `True`or `False`
 Description: Determine whether to show full month name or the abbreviation on the select month page.
 
 example:
-```
+```js
 // show month abbreviation on select month page
 const dob = dobDatepicker('#dob-input', {
 	show_long_month: false
@@ -185,7 +184,7 @@ Possible value: `True` or `False`
 Description: On select day page, determine whether to show ordinal numbers such as 1st, 2nd, 3rd, 4th, etc or not.
 
 Example:
-```
+```js
 // disable ordinal numbers
 const dob = dobDatepicker('#dob-input', {
 	enable_ordinal_number: false
@@ -195,7 +194,7 @@ const dob = dobDatepicker('#dob-input', {
 Type: Object with predefined property with string values
 Possible value: Any
 Description: Change the text label to another language. By the default here is the default texts:
-```
+```js
 labels: {
 	header_label:  'When is your birthday?',	
 	select_day_label:  'Select day',
@@ -206,7 +205,7 @@ labels: {
 }
 ```
 And here is how to change it to another language:
-```
+```js
 // change text anohter language
 const dob = dobDatepicker('#dob-input', {
 	labels: {
@@ -225,7 +224,7 @@ Possible Value: Function that returns String value
 Description: Change date format returned by the datepicker to input field. The default format is 'YYYY-MM-DD' format. 
 
 example:
-```
+```js
 // change format from 'YYYY-MM-DD' to another format
 const dob = dobDatepicker('#dob-input', {
 	dateFormat: function(date){
@@ -241,7 +240,7 @@ Possible Value: Object with predefined property key with any valid z-index css v
 Description: Just in case the datepicker z-index order is conflicting with your layout, you can tune it without recompiling the stylesheets.
 
 Here is the default value:
-```
+```js
 {
 zIndex: {
 		targetNode:  "150",
@@ -256,7 +255,7 @@ Explanation:
 - `invisibleBackground`- is to change `z-index` CSS property of the datepicker. If you resize the screen to less than 768px, the "invisible background" is the transparent black background around the datepicker.
 
 example:
-```
+```js
 // change the z-index property
 const dob = dobDatepicker('#dob-input', {
 	zIndex: {
