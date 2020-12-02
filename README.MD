@@ -195,13 +195,15 @@ Type: Object with predefined property with string values
 Possible value: Any
 Description: Change the text label to another language. By the default here is the default texts:
 ```js
-labels: {
-	header_label:  'When is your birthday?',	
-	select_day_label:  'Select day',
-	select_month_label:  'Select month',
-	select_year_label:  'Select year',	
-	reset_button_label:  'Reset and try again',
-	date_range_label:  'Year '  //label for year section -> "Year 2000 - 2020"
+{
+	labels: {
+		header_label:  'When is your birthday?',	
+		select_day_label:  'Select day',
+		select_month_label:  'Select month',
+		select_year_label:  'Select year',	
+		reset_button_label:  'Reset and try again',
+		date_range_label:  'Year '  //label for year section -> "Year 2000 - 2020"
+	}
 }
 ```
 And here is how to change it to another language:
