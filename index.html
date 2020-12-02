@@ -16,7 +16,7 @@
 
     .input-point {
         height: 250px;
-        border: 1px solid red;
+        /* border: 1px solid red; */
     }
 
     input {
@@ -24,8 +24,11 @@
     }
 
     .input-point {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-top: 20rem;
-        margin-left: 10rem;
+        /* margin-left: 4rem; */
     }
 </style>
 
@@ -35,10 +38,10 @@
 
 
         <div class="input-point">
-            <label>date of birth one:</label>
+            <label>date of birth:</label>
             <input id="dob" type="text">
         </div>
-        <input type="text">
+        <!-- <input type="text"> -->
         <div class="input-point">
             <label>date of birth two:</label>
             <input id="dob2" type="text">
@@ -60,7 +63,7 @@
 
     dob = document.getElementById('dob')
     const one = dobDatepicker(dob, {
-        display_mode: 'popup'
+        display_mode: 'inline'
     })
 
     const two = dobDatepicker('#dob2', {

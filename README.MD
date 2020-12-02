@@ -1,4 +1,5 @@
 # Date-of-birth JS
+![date of birth js demo inline](https://media.giphy.com/media/tiK4oOSTxeE3poDhsZ/giphy.gif)
 
 A datepicker specific for collecting date of birth with straight forward user interface.  Bundle size 6.9kB gzipped (Source: Bundlephobia).
 
@@ -27,7 +28,7 @@ Include `date-of-birth-js.min.css`  in the `<head>` tag:
 ```
 
 ####  Include JS library 
-and include `date-of-birth.min.js` just above your closing `</body>` tag
+and include `date-of-birth-js.min.js` just above your closing `</body>` tag
 ```html
 <body>
 	  ...
@@ -113,7 +114,7 @@ here is explanation of each property:
 Type: String  
 Possible value: 'inline' or 'popup'  
 Description: Display the datepicker whether inline (right in the bottom of the selected element) or in popup.   
-
+![date picker demo popup mode](https://media.giphy.com/media/j9jAFs76wpYlX6MIeC/giphy.gif)
 example:
 ```js
 // display datepicker in popup mode
