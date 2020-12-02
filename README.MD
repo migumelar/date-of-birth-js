@@ -166,7 +166,7 @@ const dob = dobDatepicker('#dob-input', {
 ```
 ### `long_month`- Change name of the months to another language
 Type: Array  
-Possible Value: Array with 12 string type elements
+Possible Value: Array with 12 string type elements  
 Description: Change name of the months to another language. The default value is in English such as ['January', 'February', 'March', etc...]  
 
 example:
