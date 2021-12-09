@@ -144,10 +144,10 @@ function daySelection(app) {
 
 function getOrdinalSufix(number) {
     const ordinals = ['th', 'st', 'nd', 'rd'];
-    if ([11, 12, 13].includes(number)) {
-        return text('th');
-    } else {
+    if ([1, 2, 3].includes(number % 10) && ![11, 12, 13].includes(number)) {
         return text(ordinals[number % 10]);
+    } else {
+        return text('th');
     }
 }
 
