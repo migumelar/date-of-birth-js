@@ -142,25 +142,13 @@ function daySelection(app) {
     )
 }
 
-// get ordinal sufix for day like 1st, 2nd, 3rd, 4th, etc
-// I know it's dumb that I hardcoded it, but hey it works lol
 function getOrdinalSufix(number) {
-
-    switch (true) {
-        case number === 1 || number === 21 || number === 31:
-            return text('st')
-            break;
-        case number === 2 || number === 22:
-            return text('nd')
-            break;
-        case number === 23 || number === 23:
-            return text('rd')
-            break;
-        default:
-            return text('th')
-            break;
+    const ordinals = ['th', 'st', 'nd', 'rd'];
+    if ([1, 2, 3].includes(number % 10) && ![11, 12, 13].includes(number)) {
+        return text(ordinals[number % 10]);
+    } else {
+        return text('th');
     }
-
 }
 
 // year selection wrapper component
